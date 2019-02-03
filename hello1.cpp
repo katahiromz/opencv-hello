@@ -11,6 +11,13 @@ int main(void)
     cv::imshow("image.png", img);
     cv::waitKey();
 
-    cv::imwrite("image.jpg", img);
+    cv::Mat gray;
+    cv::cvtColor(img, gray, cv::COLOR_BGR2GRAY);
+    cv::imwrite("gray.jpg", gray);
+
+    cv::Mat binary;
+    cv::threshold(gray, binary, 30, 255, cv::THRESH_OTSU);
+    cv::imwrite("binary.jpg", binary);
+
     return 0;
 }

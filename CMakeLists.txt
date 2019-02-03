@@ -63,7 +63,7 @@ find_package(OpenCV REQUIRED)
 include_directories(${OpenCV_INCLUDE_DIRS})
 
 # executable
-add_executable(hello hello.cpp)
-target_link_libraries(hello ${OpenCV_LIBS})
+add_executable(hello1 hello1.cpp)
+target_link_libraries(hello1 ${OpenCV_LIBS})
 
 ##############################################################################
