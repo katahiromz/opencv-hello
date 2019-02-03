@@ -19,5 +19,9 @@ int main(void)
     cv::threshold(gray, binary, 30, 255, cv::THRESH_OTSU);
     cv::imwrite("binary.jpg", binary);
 
+    cv::Mat blur;
+    cv::GaussianBlur(img, blur, cv::Size(5, 5), 0);
+    cv::imwrite("blur.tif", blur);
+
     return 0;
 }
